@@ -1,3 +1,132 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Age Calculator Website. Easily calculate your age in years, months, and days with our accurate and user-friendly tool.">
+    <title>Home </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .navbar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin: 0 0 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 0 0 20px;
+        }
+        .hero button {
+            background-color: white;
+            color: #3498db;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .hero button:hover {
+            background-color: #ecf0f1;
+        }
+        .features {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .features h2 {
+            margin-bottom: 20px;
+        }
+        .features p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div>
+            <a href="">Home</a>
+            <a href="/age-calculator">Age Calculator</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
 
-<h1>Provide Schema Details</h1>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to the Age Calculator</h1>
+        <p>Calculate your age in years, months, and days with our accurate and easy-to-use tool.</p>
+        <button onclick="window.location.href='/age-calculator'">Get Started</button>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+        <h2>Why Use Our Age Calculator?</h2>
+        <p>
+            Our Age Calculator is designed to provide accurate and quick calculations for your age, 
+            making it an essential tool for various purposes, such as legal documentation, health records, 
+            or simply for curiosity.
+        </p>
+        <p>
+            Enter your date of birth and an optional end date, and let our tool do the rest. Whether you 
+            need your exact age in years, months, or days, we've got you covered.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2024 Age Calculator Website. All rights reserved. | <a href="/privacy-policy">Privacy Policy</a>
+    </footer>
+</body>
+</html>
