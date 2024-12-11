@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover an accurate and easy-to-use age calculator tool. Learn how to calculate age in years, months, and days, along with interesting facts about time and age-related milestones.">
+    <title>Age Calculator | Calculate Your Exact Age in Seconds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .navbar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #34495e;
+        }
+        p {
+            margin: 10px 0;
+        }
+                form {
+            margin-top: 20px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            flex: 0 0 150px; /* Fixed width for labels */
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .form-group input {
+            width: 150px; /* Fixed width for smaller input fields */
+            padding: 6px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div>
+            <a href="/home">Home</a>
+            <a href="/age-calculator">Age Calculator</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+     <div class="container">
+        <h1>Age Calculator</h1>
+        <p>Enter your date of birth and the end date to calculate your exact age in years, months, and days.</p>
+
+        <!-- Age Calculator Form -->
+        <form action="/calculate-age" method="post">
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+            <div class="form-group">
+                <label></label> <!-- Empty label to align button -->
+                <button type="submit">Calculate Age</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <h1>Enter a Date</h1>
+            <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="StartDateInput">DATE OF BIRTH:</label>
+        <input type="date" id="StartDateInput" name="StartDateInput">
+        <label for="EndDateInput" style="margin-left: 10px;" >AGE AT THE DATE OF:</label>
+        <input type="date" id="EndDateInput" name="EndDateInput">
+        <button type="submit" style="margin-left: 10px;">Submit</button>
+    </form>
+
+    {% if years is not None and months is not None %}
+        <div class="result">
+            The Age is <strong>{{ years }}</strong> years , <strong>{{ months }}</strong> months and <strong>{{ days }}</strong> days .
+        </div>
+        {{ text }}
+    {% else %}
+        <div class="error">
+            Please provide valid inputs.
+        </div>
+    {% endif %}
+    </div>
+    <div class="container">
+        <h1>Welcome to the Age Calculator Website</h1>
+        <p>Our Age Calculator is a user-friendly tool that helps you determine your exact age in years, months, and days. Whether you're planning a celebration, checking milestones, or simply curious about your precise age, our website has you covered.</p>
+
+        <h2>How Does the Age Calculator Work?</h2>
+        <p>The age calculator uses your date of birth and the current date to calculate your exact age. It considers:</p>
+        <ul>
+            <li>Leap years for precise calculations.</li>
+            <li>Differences in months and days for accuracy.</li>
+            <li>Timezone adjustments to ensure global accuracy.</li>
+        </ul>
+
+        <h2>Features of Our Age Calculator</h2>
+        <ul>
+            <li>Calculate age in years, months, days, hours, and seconds.</li>
+            <li>Easy-to-use interface with quick results.</li>
+            <li>Works for past or future dates, making it useful for planning milestones.</li>
+            <li>Mobile-friendly design for seamless use on all devices.</li>
+        </ul>
+
+        <h2>Interesting Facts About Age</h2>
+        <p>Did you know?</p>
+        <ul>
+            <li>A year has approximately 31,536,000 seconds.</li>
+            <li>Leap years occur every 4 years, adding an extra day to the calendar.</li>
+            <li>People live an average of 71 years globally, though this varies widely by region.</li>
+        </ul>
+
+        <h2>About This Website</h2>
+        <p>Our Age Calculator website was designed with simplicity and accuracy in mind. We strive to provide a reliable tool for users across the globe. Whether you're calculating your age for fun or for serious purposes, we aim to be your go-to solution.</p>
+
+        <h2>Get Started Now</h2>
+        <p>Use our <a href="/age-calculator">Age Calculator Tool</a> and discover your precise age today!</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions, suggestions, or feedback, feel free to reach out through our <a href="/contact">Contact Page</a>.</p>
+
+        <footer>
+            <p>&copy; 2024 Age Calculator Website. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
