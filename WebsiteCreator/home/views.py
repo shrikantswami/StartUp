@@ -31,3 +31,17 @@ def contact(request):
         context = {'name': request.POST['name'], 'email': request.POST['email'], 'message': request.POST['message']}
         print(context)
     return render(request, "contact.html", context)
+
+
+def privacy_policy(request):
+    """
+    This is Home Page
+    """
+    return render(request, "privacy-policy.html", {})
+
+
+def terms(request):
+    """
+    This is Home Page
+    """
+    return render(request, "terms.html", {})
