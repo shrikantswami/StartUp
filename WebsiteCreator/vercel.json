@@ -19,6 +19,6 @@
   ],
   "env": {
     "DEBUG": "false",
-    "ALLOWED_HOSTS": ".vercel.app"
+    "ALLOWED_HOSTS": ".vercel.app,www.calculates.us"
   }
 }
