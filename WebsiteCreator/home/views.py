@@ -16,14 +16,14 @@ def home(request):
 
 def about(request):
     """
-    This is Home Page
+    This is about Page
     """
     return render(request, "about.html", {})
 
 
 def contact(request):
     """
-    This is Home Page
+    This is contact Page
     """
     context = {}
     if request.method == "POST":
@@ -35,13 +35,13 @@ def contact(request):
 
 def privacy_policy(request):
     """
-    This is Home Page
+    This is privacy-policy Page
     """
     return render(request, "privacy-policy.html", {})
 
 
 def terms(request):
     """
-    This is Home Page
+    This is terms & condition page Page
     """
     return render(request, "terms.html", {})
