@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover an accurate and easy-to-use age calculator tool. Learn how to calculate age in years, months, and days, along with interesting facts about time and age-related milestones.">
     <title>Age Calculator | Calculate Your Exact Age in Seconds</title>
+    <link rel="icon" href="{% static 'images/logo_192.png' %}" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -130,9 +132,7 @@
         </div>
         {{ text }}
     {% else %}
-        <div class="error">
-            Please provide valid inputs.
-        </div>
+        <div class="error"> Please select 'Date Of Birth' & 'End Date' , then click on calculate age button to calculate age</div>
     {% endif %}
     </div>
     <div class="container">
