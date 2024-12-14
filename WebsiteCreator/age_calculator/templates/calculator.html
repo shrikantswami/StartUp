@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover an accurate and easy-to-use age calculator tool. Learn how to calculate age in years, months, and days, along with interesting facts about time and age-related milestones.">
+    <meta name="keywords" content="Age Calculator, Calculate Age, Online Age Calculator,How to Calculate Age">
+    <meta name="author" content="www.calculates.us">
     <title>Age Calculator | Calculate Your Exact Age in Seconds</title>
     <link rel="icon" href="{% static 'images/logo_192.png' %}" type="image/x-icon">
     <style>
@@ -82,14 +84,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div>
-            <a href="/">Home</a>
-            <a href="/age-calculator">Age Calculator</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </div>
-    </nav>
+    {% include 'navbar.html' %}
 
     <!-- Main Content -->
      <div class="container">
@@ -116,15 +111,6 @@
     </div>
 
     <div class="container">
-<!--        <h1>Enter a Date</h1>-->
-<!--        <form method="post" enctype="multipart/form-data">-->
-<!--            {% csrf_token %}-->
-<!--            <label for="StartDateInput">DATE OF BIRTH:</label>-->
-<!--            <input type="date" id="StartDateInput" name="StartDateInput">-->
-<!--            <label for="EndDateInput" style="margin-left: 10px;" >AGE AT THE DATE OF:</label>-->
-<!--            <input type="date" id="EndDateInput" name="EndDateInput">-->
-<!--            <button type="submit" style="margin-left: 10px;">Submit</button>-->
-<!--        </form>-->
 
     {% if years is not None and months is not None %}
         <div class="result">

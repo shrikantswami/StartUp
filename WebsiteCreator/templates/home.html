@@ -92,24 +92,28 @@
         .footer a:hover {
             text-decoration: underline;
         }
+         ul {
+            margin: 20px 0;
+            padding: 0 20px;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
     </style>
     <meta name="google-site-verification" content="6GRgX0Chv1iNpg-nnRg4qh79O7MhYxokzuEoekzoOh4" />
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div>
-            <a href="">Home</a>
-            <a href="/age-calculator">Age Calculator</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </div>
-    </nav>
+    {% include 'navbar.html' %}
 
     <!-- Hero Section -->
     <div class="hero">
-        <h1>Welcome to the Age Calculator</h1>
+        <h1>Welcome to the Calculates</h1>
         <p>Calculate your age in years, months, and days with our accurate and easy-to-use tool.</p>
+        <p>Calculate your Percentage with our accurate and easy-to-use tool.</p>
         <button onclick="window.location.href='/age-calculator'">Get Started</button>
     </div>
 
@@ -126,7 +130,25 @@
             need your exact age in years, months, or days, we've got you covered.
         </p>
     </div>
+        <div class="features">
+        <h2>Why Use Our Website for Percentage Calculations?</h2>
+        <p>Calculating percentages can sometimes be tricky, especially when dealing with large numbers or complex equations. Our website is designed to make percentage calculations easy, accurate, and accessible to everyone. Here’s why you should use our tool:</p>
 
+        <ul>
+            <li><strong>Easy to Use:</strong> Our intuitive interface ensures that anyone can calculate percentages without prior knowledge or experience.</li>
+            <li><strong>Accurate Results:</strong> The tool provides precise calculations every time, reducing the chance of errors compared to manual methods.</li>
+            <li><strong>Time-Saving:</strong> Perform complex percentage calculations in seconds, saving you valuable time for other tasks.</li>
+            <li><strong>Mobile Friendly:</strong> Access our website on any device, including smartphones and tablets, for calculations on the go.</li>
+            <li><strong>Free to Use:</strong> Our tool is completely free, with no hidden charges or premium features locked behind a paywall.</li>
+            <li><strong>Educational Value:</strong> Learn about percentages with our helpful explanations and examples provided alongside the tool.</li>
+            <li><strong>Multiple Use Cases:</strong> Whether you’re calculating discounts, taxes, grades, or financial percentages, our tool can handle it all.</li>
+            <li><strong>Secure and Private:</strong> We don’t store your input data, ensuring your privacy and security while using our site.</li>
+            <li><strong>Accessible 24/7:</strong> Our website is always available, ensuring you can calculate percentages anytime you need.</li>
+            <li><strong>Customizable:</strong> Adjust the settings and formats to suit your specific calculation needs.</li>
+        </ul>
+
+        <p>Our website combines simplicity, reliability, and efficiency to provide the best experience for percentage calculations. Give it a try and see the difference it makes!</p>
+    </div>
     <!-- Footer -->
     <footer class="footer">
         &copy; 2024 Age Calculator Website. All rights reserved. | <a href="/privacy-policy">Privacy Policy</a>

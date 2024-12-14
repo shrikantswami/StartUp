@@ -34,3 +34,12 @@ def calculator_view(request):
         form = {"form": "provide input"}
     # return render(request, "calculator_v1.html", form)
     return render(request, "calculator.html", form)
+
+
+def percentage_calculator(request):
+    """
+    This method calculates percentage
+    :param request:
+    :return:
+    """
+    return render(request, "percentage.html", {})

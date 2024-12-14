@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easily calculate percentages with our simple percentage calculator. Ideal for students, professionals, and anyone needing quick and accurate calculations.">
+    <meta name="keywords" content="Percentage Calculator, Calculate Percent, Online Calculator,How to Calculate Percentage">
+    <meta name="author" content="www.calculates.us">
+    <title>Percentage Calculator</title>
+    <link rel="icon" href="{% static 'images/logo_192.png' %}" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            color: #0056b3;
+        }
+        .description {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .input-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            flex: 1;
+            margin: 0 5px;
+            box-sizing: border-box;
+            width: 100px
+        }
+
+        input[readonly] {
+            background-color: #f4f4f9;
+            color: #000;
+        }
+
+        button {
+            background: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 0 5px;
+        }
+
+        button:hover {
+            background: #004494;
+        }
+
+        @media (max-width: 600px) {
+            .input-row {
+                flex-direction: column;
+            }
+
+            input, button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+        .navbar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .info-section {
+            text-align: left;
+            margin-top: 20px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .info-section h2 {
+            color: #0056b3;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+    <meta name="google-site-verification" content="6GRgX0Chv1iNpg-nnRg4qh79O7MhYxokzuEoekzoOh4" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4068513374417160"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="container">
+                <div class="container">
+        <h1>Percentage Calculator</h1>
+        <p class="">
+            Welcome to our Percentage Calculator! This tool helps you quickly calculate percentages
+            for any given values. Whether you're working on homework, financial calculations, or
+            analyzing data, this tool is simple, accurate, and user-friendly.
+        </p>
+            </div>
+        <div class="input-row">
+            <input type="number" id="value" placeholder="Enter value">
+            <label for="value"> is what percent of </label>
+            <input type="number" id="total" placeholder="Enter total">
+            <button onclick="calculatePercentage()">Calculate</button>
+            <input type="text" id="result" placeholder="Result" readonly>
+        </div>
+    </div>
+
+        <div class="container info-section">
+
+
+        <h2>How Percentages Are Calculated</h2>
+        <p>
+            A percentage is a way of expressing a number as a fraction of 100. It is widely used in everyday life,
+            such as in finance, statistics, and academics. To calculate the percentage of a number:
+        </p>
+        <ol>
+            <li>
+                Divide the part (value) by the whole (total).
+            </li>
+            <li>
+                Multiply the result by 100 to get the percentage.
+            </li>
+        </ol>
+        <p>
+            For example, if you want to calculate what percentage 50 is of 200, divide 50 by 200 to get 0.25.
+            Then, multiply 0.25 by 100 to get 25%. So, 50 is 25% of 200.
+        </p>
+        <p>
+            Use this formula:
+            <strong>Percentage = (Value ÷ Total) × 100</strong>
+        </p>
+    </div>
+    <div class="container">
+        <h1>Interesting Facts About Percentages</h1>
+        <p>Percentages are an integral part of our daily lives, used in shopping discounts, academic scores, financial growth, and more. Here are some fascinating facts about percentages you might not know:</p>
+
+        <ul>
+            <li><strong>The Origin of the Word:</strong> The term "percentage" comes from the Latin phrase <em>"per centum"</em>, meaning "by the hundred."</li>
+            <li><strong>Ancient Usage:</strong> Percentages were used by ancient civilizations like the Egyptians and Babylonians for taxation and trade calculations.</li>
+            <li><strong>100% Isn’t Always the Limit:</strong> Percentages can exceed 100, often representing growth or profits beyond the original value.</li>
+            <li><strong>Decimals and Percentages:</strong> Percentages are closely linked to decimals. For example, 25% is equivalent to 0.25 in decimal form.</li>
+            <li><strong>Quick Tip Calculation:</strong> To estimate a 10% tip, simply move the decimal point of the total bill one place to the left.</li>
+            <li><strong>The Rule of 72:</strong> A financial rule of thumb states that dividing 72 by an interest rate gives the approximate years needed to double an investment.</li>
+            <li><strong>Probability in Percentages:</strong> Probabilities are often expressed as percentages, such as a "70% chance of rain."</li>
+            <li><strong>Negative Percentages:</strong> A negative percentage represents a decline, such as "-10%" indicating a 10% decrease.</li>
+            <li><strong>Exponential Growth:</strong> Percentages are used to describe natural exponential growth, such as population increases or viral spread.</li>
+            <li><strong>Simpson’s Paradox:</strong> This statistical phenomenon shows how trends in percentage data can reverse when groups are combined.</li>
+        </ul>
+
+        <p>Percentages are not only practical but also fascinating in their versatility and historical significance. They play a crucial role in mathematics, science, economics, and everyday life.</p>
+    </div>
+
+    <footer>
+        &copy; 2024 www.calculates.us All Rights Reserved.
+    </footer>
+    <script>
+        function calculatePercentage() {
+            const value = parseFloat(document.getElementById('value').value);
+            const total = parseFloat(document.getElementById('total').value);
+
+            if (!value || !total || total === 0) {
+                document.getElementById('result').value = "Invalid input";
+                return;
+            }
+
+            const percentage = (value / total) * 100;
+            document.getElementById('result').value = `${percentage.toFixed(2)}%`;
+        }
+    </script>
+</body>
+</html>

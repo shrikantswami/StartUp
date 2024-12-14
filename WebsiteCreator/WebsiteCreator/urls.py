@@ -25,6 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('', include('home.urls')),
-    path('age-calculator', include('age_calculator.urls'))
+    path('calculator', include('age_calculator.urls'))
 
 ]
