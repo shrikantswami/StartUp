@@ -77,6 +77,33 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+        button {
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 0 5px;
+        }
+        button:hover {
+            background: #004494;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            background: transparent;
+            bottom: 0;
+            color: transparent;
+            cursor: pointer;
+            height: auto;
+            left: 0;
+            position: relative;
+            right: 0;
+            top: 0;
+            width: auto;
+        }
+
     </style>
     <meta name="google-site-verification" content="6GRgX0Chv1iNpg-nnRg4qh79O7MhYxokzuEoekzoOh4" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4068513374417160"
@@ -91,21 +118,19 @@
         <h1>Age Calculator</h1>
         <p>Enter your date of birth and the end date to calculate your exact age in years, months, and days.</p>
 
-        <!-- Age Calculator Form -->
-<!--        <form action="/calculate-age" method="post">-->
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
                 <label for="StartDateInput">Date of Birth:</label>
-                <input type="date" id="StartDateInput" name="StartDateInput" required>
+                    <input  type="date" id="StartDateInput" name="StartDateInput" onclick="this.showPicker()" required>
             </div>
             <div class="form-group">
                 <label for="EndDateInput">End Date:</label>
-                <input type="date" id="EndDateInput" name="EndDateInput" required>
+                <input type="date" id="EndDateInput" name="EndDateInput"  onclick="this.showPicker()" required>
             </div>
             <div class="form-group">
                 <label></label> <!-- Empty label to align button -->
-                <button type="submit">Calculate Age</button>
+                <button type="submit">Calculate</button>
             </div>
         </form>
     </div>
@@ -153,7 +178,7 @@
         <p>Our Age Calculator website was designed with simplicity and accuracy in mind. We strive to provide a reliable tool for users across the globe. Whether you're calculating your age for fun or for serious purposes, we aim to be your go-to solution.</p>
 
         <h2>Get Started Now</h2>
-        <p>Use our <a href="/age-calculator">Age Calculator Tool</a> and discover your precise age today!</p>
+        <p>Use our <a href="/calculator/age-calculator">Age Calculator Tool</a> and discover your precise age today!</p>
 
         <h2>Contact Us</h2>
         <p>If you have any questions, suggestions, or feedback, feel free to reach out through our <a href="/contact">Contact Page</a>.</p>
